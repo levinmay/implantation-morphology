@@ -1,4 +1,4 @@
-# Whole-embryo segmentation and characterization
+# Implantation morphology 🔬
 
 This package segments whole embryos in brightfield microscopy images, cleans
 the masks, and measures embryo shape and appearance. A classifier predicts four
@@ -18,10 +18,10 @@ source ../embryo-env/bin/activate
 python -m pip install -e .
 ```
 
-## Try the supplied example
+## Start with one embryo
 
-This example measures six images of one embryo using supplied masks, without
-running segmentation or staging.
+Try it on six images of one embryo. The masks are already included, so you can
+explore the measurements without running segmentation or predicting stages.
 
 ```bash
 python -m pipeline characterize \
@@ -43,7 +43,7 @@ Use a new output directory for each run. For command options, run
 See [example details](paper_reproduction/examples/README.md) for the data source
 and a synthetic classifier-fitting example.
 
-## Run on your own images
+## Try your own images
 
 Put your images in a folder such as `../images/`, with one embryo per image.
 Use 8-bit RGB or grayscale PNG files with a lowercase `.png` extension. Convert
@@ -95,7 +95,7 @@ set `--images paper_reproduction/examples/figure1/images`. Fresh predictions
 may differ from saved masks and are not checked by `verify_figure1`.
 Load only trusted models.
 
-## Outputs
+## What you get
 
 The combined run writes these files inside `../embryo-results/`:
 
@@ -116,7 +116,7 @@ May Levin, Molika Sinha, Pietro Liò and Matteo Molè. *Whole-Embryo Segmentatio
 and Developmental Characterization During In Vitro Implantation.*
 Accepted at ML4H 2026, PMLR volume 346. [BibTeX](CITATION.bib).
 
-## Further instructions
+## More details
 
 - [Pipeline usage](pipeline/README.md): individual commands and classifier fitting.
 - [Output fields](pipeline/OUTPUTS.md): measurements, units, and stage labels.
