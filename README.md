@@ -1,4 +1,4 @@
-# Implantation morphology 🔬
+# Implantation morphology
 
 This package segments whole embryos in brightfield microscopy images, cleans
 the masks, and measures embryo shape and appearance. A classifier predicts four
