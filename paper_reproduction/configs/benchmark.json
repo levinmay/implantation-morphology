@@ -1,0 +1,120 @@
+{
+  "artifact_name": "Embryo-577",
+  "release_status": "paper_code",
+  "cohort": {
+    "embryos": 131,
+    "linkage_components": 123,
+    "developmental_group_counts": [87, 129, 207, 154],
+    "evaluation_folds": 5,
+    "units": 577
+  },
+  "evaluation": {
+    "bootstrap_repetitions": 5000,
+    "outer_test_fold": "k",
+    "validation_fold": "(k + 1) mod 5",
+    "training_folds": 3
+  },
+  "developmental_groups": [
+    "early_pre_implantation_hatching",
+    "floating_apposition_adhesion",
+    "implantation_or_later",
+    "degeneration"
+  ],
+  "nnunet": {
+    "configuration": "2d",
+    "framework_version": "2.6.4",
+    "inference_checkpoint": "checkpoint_final.pth",
+    "natural_image_io": true,
+    "observed_patch_size": [896, 896],
+    "observed_batch_size": 4,
+    "seed": 42,
+    "robustness_seeds": [42, 43, 44],
+    "test_time_augmentation": true,
+    "trainer": "nnUNetTrainer_250epochs_seeded",
+    "training_epochs": 250
+  },
+  "sam": {
+    "architecture": "vit_h",
+    "box_nms_thresh": 0.7,
+    "checkpoint_sha256": "a7bf3b02f3ebf1267aba913ff637d9a2d5c33d3173bb679e46d9f338c26f262e",
+    "crop_n_layers": 0,
+    "crop_n_points_downscale_factor": 1,
+    "crop_nms_thresh": 0.7,
+    "crop_overlap_ratio": 0.3413333333333333,
+    "min_mask_region_area": 0,
+    "points_per_batch": 64,
+    "points_per_side": 32,
+    "pred_iou_thresh": 0.88,
+    "stability_score_thresh": 0.95
+  },
+  "selector": {
+    "features": [
+      "pred_iou",
+      "stability",
+      "log_area",
+      "circ",
+      "asp",
+      "edge",
+      "center_dist",
+      "solidity",
+      "num_cc",
+      "lcr",
+      "bbox_fill",
+      "pred_iou_z",
+      "log_area_z",
+      "area_rank",
+      "circ_rank",
+      "fill_rank"
+    ],
+    "model": "HistGradientBoostingRegressor",
+    "seed_rule": "42 + outer_fold",
+    "training_target": "proposal IoU"
+  },
+  "state_classifier": {
+    "upstream_masks": "one seed-42 segmenter per outer fold supplies all staging rows; outer test excluded from fitting and planning",
+    "upstream_training_masks": "in-sample, not inner cross-fitted",
+    "candidate_models": [
+      "class-balanced logistic regression",
+      "class-balanced Extra Trees"
+    ],
+    "selection_metric": "validation macro one-versus-rest AUROC",
+    "combined_feature_count": 15,
+    "seed_base": 20260827,
+    "logistic_C": [0.01, 0.1, 1.0, 10.0, 100.0],
+    "extra_trees_estimators": 500,
+    "extra_trees_min_samples_leaf": [2, 5, 10],
+    "extra_trees_max_features": ["sqrt", 0.5],
+    "feature_selection": "post_hoc_permutation_importance_then_fixed_matched_refit",
+    "uses_dpf": false
+  },
+  "tcmi": {
+    "bootstrap_repetitions": 5000,
+    "bootstrap_seed_base": 20260827,
+    "bootstrap_seed_tcmi": 20260829,
+    "direction_angle_offsets_degrees": [-12.0, 0.0, 12.0],
+    "equation": "100 * neck_evidence * sqrt(asymmetric_fit_gain)",
+    "inputs": "binary mask morphology only",
+    "maximum_normalized_side": 128,
+    "minimum_foreground_pixels": 20,
+    "normalized_center_separations": [0.72, 0.84, 0.96],
+    "primary_radius_factors": [0.92, 1.0, 1.08],
+    "residual_outer_quantile": 0.85,
+    "satellite_to_primary_radius_ratios": [
+      0.08,
+      0.12,
+      0.18,
+      0.26,
+      0.38,
+      0.55,
+      0.78,
+      1.0
+    ],
+    "status": "exploratory"
+  },
+  "topology_standardization": {
+    "connectivity": 8,
+    "fill_only_tiny_enclosed_holes": true,
+    "hole_area_limit_pixels": "max(16, min(2048, round(0.001 * largest_component_area)))",
+    "maximum_connected_components": 1
+  }
+}

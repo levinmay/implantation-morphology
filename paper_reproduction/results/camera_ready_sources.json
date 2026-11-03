@@ -1,0 +1,62 @@
+{
+  "staging_training_only_results.csv": {
+    "source": "feature_selection/aggregate/RESULTS.csv",
+    "sha256": "05029d69cebab64f03768023f4b8b2c43bdc35223c47c3d42318cb15fc6541bf"
+  },
+  "staging_training_only_confusion.csv": {
+    "source": "feature_selection/aggregate/CONFUSION_MATRIX.csv",
+    "sha256": "97648db58f5b2405189735cb981a973e0b6334895f81cd2f251d77cb8c85491c"
+  },
+  "staging_training_only_per_class.csv": {
+    "source": "feature_selection/aggregate/PER_CLASS.csv",
+    "sha256": "7c3ddc9b6b35f71558d6776034f46134cf79a654ab7f3acc82f01a67730848d4"
+  },
+  "staging_training_only_paired_bootstrap.csv": {
+    "source": "feature_selection/aggregate/PAIRED_COMPARISONS.csv",
+    "sha256": "476c4237f42e02c65a860a16a1b49f0dfb9e08496579305a09cb39ed5fa83c3e"
+  },
+  "staging_training_only_selected_features.csv": {
+    "source": "feature_selection/aggregate/SELECTED_FEATURES_AND_MODELS.csv",
+    "sha256": "ddc1271555405c030ab53cf593a90c2768f7f82229a97b8998f31e3857fa789b"
+  },
+  "plain_unet_results.csv": {
+    "source": "plain_unet_v1/aggregate/RESULTS.csv",
+    "sha256": "01d1c214c80146c4f27f1c6e699c64c249534cdf6cd4b0a4cbc996522df99ada"
+  },
+  "plain_unet_paired_bootstrap.csv": {
+    "source": "plain_unet_v1/aggregate/PAIRED_COMPARISONS.csv",
+    "sha256": "74e77aea6bb8b192fb06ea40ef6177ec1bb291208286f7f8497f76c5251b8a36"
+  },
+  "calibration_coverage.csv": {
+    "source": "calibration_subsets_20261010_v1/aggregate/COVERAGE.csv",
+    "source_sha256": "00c118d27b3ccf20203afa181c897381c7e53b2b9b134f60594690e03fa6234a",
+    "included_subsets": [
+      "all_existing_scales",
+      "exclude_exp25_57_rough_images"
+    ],
+    "sha256": "e6ea9d32118c1fe50be11e5aa7151b2335c7939e4a6772439e2b20ad8186dafd"
+  },
+  "calibration_area_summaries.csv": {
+    "source": "calibration_subsets_20261010_v1/aggregate/AREA_SUMMARIES.csv",
+    "source_sha256": "ee6102b0d2453639508804aee9f68dc7e1dc6c216dde37be859d7ec98a7b136f",
+    "included_subsets": [
+      "all_existing_scales",
+      "exclude_exp25_57_rough_images"
+    ],
+    "sha256": "72111d3cd7a71f0ad0b2cb8016b8ced1fdb7631df598094aff76222f67e83e10"
+  },
+  "calibration_patterns.csv": {
+    "source": "calibration_subsets_20261010_v1/aggregate/PATTERNS.csv",
+    "source_sha256": "bb5632df2cb6bd1433b8574e1ea36dedb046d12358f25338d238744e5fcc5092",
+    "included_subsets": [
+      "all_existing_scales",
+      "exclude_exp25_57_rough_images"
+    ],
+    "sha256": "b57d65f49578aebbdfa67055f5b7a13c1546cccb369e523ca41e7fff9495d0f4"
+  },
+  "segmentation_mean_median.csv": {
+    "source": "plain_unet_v1/private/METRICS.csv",
+    "transformation": "Group mean and median only; no observation-level rows exported.",
+    "sha256": "0510b0ae85c5a9ffd4ee523764e05d1e797f32a8626ab54a20c307d9a1da6690"
+  }
+}

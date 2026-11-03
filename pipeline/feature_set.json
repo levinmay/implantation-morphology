@@ -1,0 +1,49 @@
+{
+  "whole_image_appearance": [
+    "texture_boundary_gray_contrast",
+    "texture_boundary_gray_absolute_contrast",
+    "texture_lbp_uniform_fraction",
+    "texture_boundary_gradient_contrast",
+    "texture_lbp_mean",
+    "texture_glcm_homogeneity",
+    "texture_glcm_energy",
+    "texture_gradient_std",
+    "texture_glcm_entropy"
+  ],
+  "rich_mask_morphology": [
+    "rich_deficit_component_count",
+    "rich_skeleton_length_scaled",
+    "rich_radial_median",
+    "rich_core_fraction_075",
+    "rich_distance_max",
+    "rich_distance_std"
+  ],
+  "within_mask_appearance": [
+    "texture_boundary_gray_contrast",
+    "texture_boundary_gray_absolute_contrast",
+    "texture_lbp_uniform_fraction",
+    "texture_boundary_gradient_contrast",
+    "texture_lbp_mean",
+    "texture_glcm_homogeneity",
+    "texture_glcm_energy",
+    "texture_gradient_std",
+    "texture_glcm_entropy"
+  ],
+  "combined": [
+    "rich_deficit_component_count",
+    "texture_boundary_gray_contrast",
+    "texture_boundary_gray_absolute_contrast",
+    "texture_lbp_uniform_fraction",
+    "texture_boundary_gradient_contrast",
+    "texture_lbp_mean",
+    "rich_skeleton_length_scaled",
+    "rich_radial_median",
+    "texture_glcm_homogeneity",
+    "texture_glcm_energy",
+    "rich_core_fraction_075",
+    "rich_distance_max",
+    "rich_distance_std",
+    "texture_gradient_std",
+    "texture_glcm_entropy"
+  ]
+}

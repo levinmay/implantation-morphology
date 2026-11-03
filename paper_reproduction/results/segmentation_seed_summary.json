@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "units_per_seed": 577,
+  "mean_pooled_oof_dice": 0.8785033287341217,
+  "sample_standard_deviation_across_seeds": 0.0014879855277321608,
+  "sd_ddof": 1,
+  "best_seed_selection": false,
+  "all_seed_sam_point_differences_positive": true,
+  "interpretation": "Training-randomness robustness on the same five folds; not external validation or a confidence interval."
+}

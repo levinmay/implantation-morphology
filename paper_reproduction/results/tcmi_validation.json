@@ -1,0 +1,25 @@
+{
+  "bootstrap_reps": 5000,
+  "equation_inputs": "binary mask morphology only",
+  "exact_hatching_day_units": 60,
+  "experiment_only_exclusions": {
+    "hatching_window_note_says_not_in_image": 5
+  },
+  "labels_used_only_for_aggregate_validation": true,
+  "mask_sources": [
+    "nnunet_raw",
+    "reference"
+  ],
+  "note_exclusion_rule": "exclude hatching-window observations when the normalized review note states that hatching is not in the image",
+  "pre_implantation_units": 211,
+  "primary_metric": "tcmi_score = 100 * neck_evidence * sqrt(asymmetric_fit_gain)",
+  "row_level_outputs_private": true,
+  "same_cohort_post_visual_review": true,
+  "status": "PASS_EXPLORATORY",
+  "substage_counts": {
+    "early_pre_implantation": 20,
+    "floating_apposition_adhesion": 129,
+    "hatching_window": 62
+  },
+  "tcmi_derived_without_refitting": true
+}

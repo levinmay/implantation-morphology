@@ -1,0 +1,11 @@
+method,group,observations,mean_dice
+nnunet_original_raw,overall,577,0.8797663962737541
+nnunet_original_raw,degeneration,154,0.9215309053355702
+nnunet_original_raw,early_pre_implantation_hatching,87,0.9564382950366236
+nnunet_original_raw,floating_apposition_adhesion,129,0.929400892217029
+nnunet_original_raw,implantation_or_later,207,0.7855391520004604
+plain_unet,overall,577,0.8131590018172914
+plain_unet,degeneration,154,0.84550495719206
+plain_unet,early_pre_implantation_hatching,87,0.9217122471446444
+plain_unet,floating_apposition_adhesion,129,0.8383717645460267
+plain_unet,implantation_or_later,207,0.7277587319467553

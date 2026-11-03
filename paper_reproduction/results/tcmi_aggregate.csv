@@ -1,0 +1,5 @@
+source,target,n,positive_n,mean,median,q25,q75,zero_fraction,above_50_fraction,above_70_fraction,auroc,ci_low,ci_high,bootstrap_reps
+reference,hatching_window_target,211,62,60.56,74.56,44.33,81.59,0.1451612903,0.7258064516,0.5967741935,0.838223,0.766053,0.905773,5000
+reference,exact_hatching_day_target,211,60,60.99,74.56,55.29,81.57,0.15,0.75,0.6,0.834051,0.758395,0.904511,5000
+nnunet_raw,hatching_window_target,211,62,59.55,73.15,47.95,81.91,0.1612903226,0.7258064516,0.6290322581,0.835246,0.765710,0.900870,5000
+nnunet_raw,exact_hatching_day_target,211,60,59.18,73.15,48.99,81.79,0.1833333333,0.7333333333,0.6333333333,0.821192,0.745412,0.890962,5000

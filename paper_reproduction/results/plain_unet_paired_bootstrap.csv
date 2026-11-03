@@ -1,0 +1,2 @@
+comparison,dice_difference,ci_low,ci_high
+plain_unet_minus_nnunet,-0.0666073944564628,-0.08051101609237352,-0.05368432002682628
