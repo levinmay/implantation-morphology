@@ -7,6 +7,10 @@ floating/apposition/adhesion, implantation or later, and degeneration.
 The Two-Circle Morphology Index (TCMI) describes visible hatching-associated
 two-lobe shape. This is research software, not a clinical predictor.
 
+![Embryo analysis pipeline showing segmentation, mask cleanup, feature extraction and developmental-state classification.](assets/pipeline.png)
+
+Whole-embryo segmentation, mask cleanup, feature extraction and developmental-state classification.
+
 ## Install
 
 Use Python 3.11 on Linux. Run these commands from the directory containing

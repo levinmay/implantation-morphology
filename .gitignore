@@ -45,6 +45,8 @@
 !.gitignore
 !LICENSE
 !README.md
+!assets/
+!assets/pipeline.png
 !pipeline/README.md
 !pipeline/OUTPUTS.md
 !pipeline/MODELS.md
