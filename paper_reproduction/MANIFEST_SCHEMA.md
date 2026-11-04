@@ -44,9 +44,9 @@ The repository publishes the exact assignment as
 | `evaluation_fold` | Integer fold in `0`--`4` |
 | `component_token` | Non-reversible grouping token preserving the leakage-safe grouping structure |
 
-The mapping from these tokens to governed identifiers remains private. No
-governed identifiers, images, masks, predictions, paths, dates, or clinical
-metadata are published.
+The mapping from these tokens to governed identifiers remains private. The repository includes six example images and their reference, predicted and
+cleaned masks. The remaining study images and masks, identifying information
+and clinical metadata are not included.
 
 ## Developmental-state feature cache
 
